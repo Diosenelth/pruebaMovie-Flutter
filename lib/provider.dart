@@ -18,7 +18,7 @@ class ProviderMovie extends ChangeNotifier{
     if (mov.results.isNotEmpty){
       if(movies==null){
         movies=[];
-        movies=mov.results;
+        movies=mov.results.cast<Movie>();
         notifyListeners();
       }
       // else{
